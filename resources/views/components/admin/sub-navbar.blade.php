@@ -9,14 +9,14 @@
                     <nav class="breadcrumb-one" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><span>Sales</span></li>
+                            {{-- <li class="breadcrumb-item active" aria-current="page"><span>Sales</span></li> --}}
                         </ol>
                     </nav>
 
                 </div>
             </li>
         </ul>
-        <ul class="navbar-nav flex-row ml-auto ">
+        {{-- <ul class="navbar-nav flex-row ml-auto ">
             <li class="nav-item more-dropdown">
                 <div class="dropdown  custom-dropdown-icon">
                     <a class="dropdown-toggle btn" href="#" role="button" id="customDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Settings</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
@@ -30,6 +30,6 @@
                     </div>
                 </div>
             </li>
-        </ul>
+        </ul> --}}
     </header>
 </div>

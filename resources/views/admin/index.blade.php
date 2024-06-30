@@ -12,5 +12,5 @@
 
 @section('content')
     
-<h2> Admin Pagre dashboard  </h2>
+<h2> Admin  dashboard  </h2>
 @endsection
