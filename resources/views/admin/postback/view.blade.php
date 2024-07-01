@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="col-12 mt-5">
-            <label>Add sub id into your offer URL  <code>s2=[clickid]</code>. Then create offer.  </label>
+            <label>Add sub id into your offer URL  <code> s2=[clickid] </code>. Then create offer.  </label>
             <div class="d-flex align-items-center justify-content-between">
                 <input type="url" id="company_url" style="max-width: 90%;" class="form-control" >
                 <button class="btn btn-dark " style="white-space: nowrap; " id="add_id_company_url" >add id</button>

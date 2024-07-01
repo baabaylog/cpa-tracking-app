@@ -12,8 +12,11 @@ class PostbackURLController extends Controller
 {
     public function index(Request $request){
         
-        $request->headers->set('Accept', 'application/json');
-        
+        // $request->headers->set('Accept', 'application/json');
+        Log::channel('postback_url')->info('Request Process Post back URL called here. ');
+        Log::channel('postback_url')->info(print_r($_GET, true));
+        Log::channel('postback_url')->info(print_r($_POST, true));
+
         $user_id = @$_GET['uid'];
         $company = @$_GET['comp'];
         $data = $request->all();
