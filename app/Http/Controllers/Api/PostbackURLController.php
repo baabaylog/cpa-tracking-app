@@ -41,9 +41,13 @@ class PostbackURLController extends Controller
 
         $offer = Offer::find($offer_id);
         $link = $offer->link;
-
+        if(str_contains($link, '[clickid]')){
+            $click_id = String::rand(16);
+            $link = str_replace('[click_id]', $click_id, $link);
+        }
+        Log::channel('postback_url')->info('Offer link -> ' . $link);
         return redirect($link);
-
     }
+
   
 }

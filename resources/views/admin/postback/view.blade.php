@@ -13,7 +13,7 @@
                 <span> Paste your postback your to your user profile.  </span>
             </div>
             <div class="border bg-light rounded p-3">
-                <span> {{ URL::to('/') . '/api/postback_url/?uid='. Auth::user()->id . '&comp=maxbounty' }}  </span>
+                <span> {{ URL::to('/') . '/api/postback_url/'. Auth::user()->id . '/maxbounty?s1=#S1#&offid=#OFFID#&ip=#IP#&rate=#RATE#' }}  </span>
             </div>
         </div>
         <div class="col-12 mt-5">
