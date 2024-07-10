@@ -41,7 +41,7 @@
             console.log(company_url.val())
             if(company_url.val().includes('?')){
                 if(!company_url.val().includes('&s2=[clickid]')){
-                    const added_id = company_url.val() + '$s2=[clickid]';
+                    const added_id = company_url.val() + '&s2=[clickid]';
                     company_url.val(added_id);
                 }
             }else{
