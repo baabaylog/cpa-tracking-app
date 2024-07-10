@@ -9,7 +9,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::controller(PostbackURLController::class)->group(function (){
-    Route::any('/postback_url', 'index');
+    Route::get('/postback_url/{uid}/{company}', 'index');
     Route::any('/offer/{name}/{offer_id}', 'offer_link');
 });
 
