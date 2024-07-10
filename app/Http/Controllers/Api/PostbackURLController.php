@@ -7,6 +7,7 @@ use App\Models\Offer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 class PostbackURLController extends Controller
 {
@@ -42,7 +43,7 @@ class PostbackURLController extends Controller
         $offer = Offer::find($offer_id);
         $link = $offer->link;
         if(str_contains($link, '[clickid]')){
-            $click_id = String::rand(16);
+            $click_id = Str::random(16);
             $link = str_replace('[click_id]', $click_id, $link);
         }
         Log::channel('postback_url')->info('Offer link -> ' . $link);
