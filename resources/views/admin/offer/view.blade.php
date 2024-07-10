@@ -35,7 +35,7 @@
                             <td> {{ $offer->amount }} </td>
                             <td> 
                                 <div class="border rounded bg-light p-1" >
-                                    {{ (URL::to("/api/offer/$offer->name/$offer->id")) }}
+                                    <a target="_blank" href="{{ (URL::to("/api/offer/$offer->name/$offer->id")) }}">{{ (URL::to("/api/offer/$offer->name/$offer->id")) }}</a>
                                 </div>
                             </td>
                             <td> {{ $offer->status }} </td>
