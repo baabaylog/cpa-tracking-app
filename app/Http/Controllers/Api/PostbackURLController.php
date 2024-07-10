@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 
 class PostbackURLController extends Controller
 {
-    public function index($company, $uid){
+    public function index($uid, $company){
         
         // $request->headers->set('Accept', 'application/json');
         Log::channel('postback_url')->info('Request Process Post back URL called here. ');
@@ -33,6 +33,7 @@ class PostbackURLController extends Controller
         try {
             
             Log::channel('postback_url')->info('called Offer link: [Request] => '. print_r($request->all(), true) . ' [Name] => ' . print_r($name, true) . ' [Offer id] =>  ' . $offer_id);
+
             
         } catch (\Throwable $th) {
             //throw $th;
@@ -42,6 +43,8 @@ class PostbackURLController extends Controller
 
         $offer = Offer::find($offer_id);
         $link = $offer->link;
+        $offer->clicks = (int) $offer->clicks + 1;
+        $offer->save();
         if(str_contains($link, '[clickid]')){
             $click_id = Str::random(16);
             $link = str_replace('[clickid]', $click_id, $link);
