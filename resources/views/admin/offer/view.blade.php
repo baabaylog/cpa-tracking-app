@@ -35,10 +35,13 @@
                             <td> {{ $offer->amount }} </td>
                             <td> 
                                 <div class="border rounded bg-light p-1" >
-                                    <a target="_blank" href="{{ (URL::to("/api/offer/$offer->name/$offer->id")) }}">{{ (URL::to("/api/offer/$offer->name/$offer->id")) }}</a>
+                                    @php
+                                        $offerName = str_replace(' ', '_', strtolower($offer->name));
+                                    @endphp
+                                    <a target="_blank" href="{{ (URL::to("/api/offer/$offerName/$offer->id")) }}">{{ (URL::to("/api/offer/$offerName/$offer->id")) }}</a>
                                 </div>
                             </td>
-                            <td> {{ $offer->status }} </td>
+                            <td> <span style="border: 1px solid lightblue; border-radius: 7px; padding: 5px 15px;"> {{ ucfirst($offer->status) }} </span> </td>
                         </tr>
                         @endforeach
                     </tbody>
