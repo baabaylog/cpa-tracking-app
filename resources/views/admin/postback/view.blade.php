@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="col-12 mt-5">
-                <label>Add sub id into your offer URL <code> s2=[clickid] </code>. Then create offer. </label>
+                <label>Add sub id into your offer URL <code> s1=[clickid] </code>. Then create offer. </label>
                 <div class="d-flex align-items-center justify-content-between">
                     <input type="url" id="company_url" style="max-width: 90%;" class="form-control">
                     <button class="btn btn-dark " style="white-space: nowrap; " id="add_id_company_url">add id</button>
@@ -40,12 +40,12 @@
                 const company_url = $('#company_url');
                 console.log(company_url.val())
 
-                if (!company_url.val().includes('s2=[clickid]')) {
+                if (!company_url.val().includes('s1=[clickid]')) {
                     if (company_url.val().includes('?')) {
-                        const added_id = company_url.val() + '&s2=[clickid]';
+                        const added_id = company_url.val() + '&s1=[clickid]';
                         company_url.val(added_id);
                     } else {
-                        const added_id = company_url.val() + '?s2=[clickid]';
+                        const added_id = company_url.val() + '?s1=[clickid]';
                         company_url.val(added_id);
 
                     }
